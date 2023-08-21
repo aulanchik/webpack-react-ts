@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@actions/github": "^5.1.1",
     "css-loader": "^6.8.1",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
