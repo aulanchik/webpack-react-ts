@@ -1,23 +1,22 @@
 const { GitHub, context } = require('@actions/github');
 
 async function run() {
-  const { GITHUB_TOKEN } = process.env;
-  const octokit = new GitHub(GITHUB_TOKEN);
+  const token = process.env.GITHUB_TOKEN;
+  const octokit = new GitHub(token);
 
   const prNumber = context.payload.pull_request.number;
-  const { owner, repo } = context.repo;
 
   try {
     await octokit.pulls.createReviewRequest({
-      owner,
-      repo,
+      owner: context.repo.owner,
+      repo: context.repo.repo,
       pull_number: prNumber,
-      reviewers: [owner],
+      reviewers: [`${context.repo.owner}`],
     });
 
     await octokit.pulls.merge({
-      owner,
-      repo,
+      owner: context.repo.owner,
+      repo: context.repo.repo,
       pull_number: prNumber,
     });
   } catch (error) {

@@ -1,25 +1,27 @@
-name: Merge Dependabot PRs
+name: Add Reviewer and Auto Merge
+
 on:
   pull_request:
     types:
       - opened
 
 jobs:
-  merge_dependabot:
+  add_reviewer_and_merge:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-      - name: Merge pull request
-        uses: actions/github-script@v4
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const prNumber = context.payload.pull_request.number;
-            const octokit = github.getOctokit(token);
-            await octokit.pulls.merge({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber,
-              reviewer: [context.repo.owner],
-            });
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install @actions/github
+
+      - name: Add Reviewer and Merge
+        run: node .github/scripts/add-reviewer-and-merge.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
