@@ -16,7 +16,7 @@
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "scss-loader": "^0.0.1",
+    "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3"
   },
   "devDependencies": {
