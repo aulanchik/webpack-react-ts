@@ -10,7 +10,12 @@
     "moduleResolution": "node",
     "target": "es5",
     "allowJs": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "@/components": ["./components"],
+      "@/utils": ["./utils"]
+    }
   },
   "include": ["./src/**/*"]
 }
