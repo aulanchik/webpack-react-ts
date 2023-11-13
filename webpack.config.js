@@ -13,24 +13,13 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|tsx?)$/,
         use: 'babel-loader',
         exclude: /node_modules/,
       },
       {
-        test: /\.png$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.svg$/,
-        use: 'file-loader',
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: 'asset/resource',
       },
       {
         test: /\.ts(x)?$/,
