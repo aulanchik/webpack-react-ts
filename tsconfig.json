@@ -11,15 +11,9 @@
     "target": "es5",
     "allowJs": true,
     "jsx": "react",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/components": ["./src/components"],
-      "@/containers": ["./src/containers"],
-      "@/contexts": ["./src/contexts"],
-      "@/configs": ["./src/configs"],
-      "@/pages": ["./src/pages"],
-      "@/hooks": ["./src/hooks"],
-      "@/utils": ["./src/utils"]
+      "@/*": ["*"]
     }
   },
   "include": ["./src/**/*"]
