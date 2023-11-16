@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
   entry: './src/index.tsx',
@@ -39,10 +38,12 @@ const config = {
     new CopyPlugin({
       patterns: [{ from: 'public/index.html' }],
     }),
-    new CleanWebpackPlugin(),
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
 };
 
