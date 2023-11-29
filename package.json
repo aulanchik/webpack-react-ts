@@ -20,7 +20,7 @@
     "style-loader": "^3.3.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.3",
+    "@babel/core": "^7.23.5",
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
     "@types/jest": "^29.5.10",
