@@ -1,6 +1,15 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import App from "./App";
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 
-var mountNode = document.getElementById("app");
-ReactDOM.render(<App />, mountNode);
+const rootElement = document.getElementById('app');
+
+const root = createRoot(rootElement as HTMLElement);
+
+const mountNode = (
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+
+root.render(mountNode);
