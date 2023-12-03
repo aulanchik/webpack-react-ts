@@ -1,5 +1,6 @@
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config();
 const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
@@ -37,6 +38,9 @@ const config = {
   plugins: [
     new CopyPlugin({
       patterns: [{ from: 'public/index.html' }],
+    }),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(dotenv.parsed),
     }),
   ],
   resolve: {
