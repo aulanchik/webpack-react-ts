@@ -19,7 +19,7 @@
     "style-loader": "^3.3.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.5",
+    "@babel/core": "^7.23.6",
     "@babel/preset-env": "^7.23.5",
     "@babel/preset-react": "^7.23.3",
     "@types/dotenv": "^8.2.0",
