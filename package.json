@@ -19,8 +19,8 @@
     "style-loader": "^3.3.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.3",
+    "@babel/core": "^7.24.3",
     "@babel/preset-react": "^7.23.3",
     "@types/dotenv": "^8.2.0",
     "@types/jest": "^29.5.12",
@@ -36,7 +36,7 @@
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.2",
     "url-loader": "^4.1.1",
-    "webpack": "^5.90.3",
+    "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.3"
   }
