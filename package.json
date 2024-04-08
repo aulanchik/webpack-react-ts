@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0",
     "sass": "^1.74.1",
     "sass-loader": "^14.1.1",
-    "style-loader": "^3.3.4"
+    "style-loader": "^4.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.3",
